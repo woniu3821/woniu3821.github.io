@@ -3,14 +3,18 @@
 <head><meta name="generator" content="Hexo 3.8.0">
   <meta charset="utf-8">
   
-  <title>Hello World | Hexo</title>
+  <title>Hexo</title>
 
   
   <meta name="author" content="John Doe">
   
 
   
-  <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in ">
+  <meta name="description" content="git使用方法
+仓库基础设置
+
+@(我的第一个笔记本)[ssh-keygen -t rsa -C “taocui@wisedu.com“, ssh-keygen -t rsa  ssh -T git@github.com进行测试]
+@(github ssh)[ssh-keygen -t rsa  s">
   
 
   
@@ -22,7 +26,7 @@
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
 
-  <meta property="og:title" content="Hello World">
+  
 
   <meta property="og:site_name" content="Hexo">
 
@@ -59,7 +63,7 @@
 
   
     
-    <h3 class="article-title"><span>Hello World</span></h3>
+    <h3 class="article-title"><span></span></h3>
     
   
 
@@ -79,15 +83,43 @@
   <div class="article-content">
     <div class="entry">
       
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+        <h1 id="git使用方法"><a href="#git使用方法" class="headerlink" title="git使用方法"></a>git使用方法</h1><blockquote>
+<p>仓库基础设置</p>
+</blockquote>
+<p>@(我的第一个笔记本)[ssh-keygen -t rsa -C “<a href="mailto:taocui@wisedu.com" target="_blank" rel="noopener">taocui@wisedu.com</a>“, ssh-keygen -t rsa  ssh -T <a href="mailto:git@github.com" target="_blank" rel="noopener">git@github.com</a>进行测试]</p>
+<p>@(github ssh)[ssh-keygen -t rsa  ssh -T <a href="mailto:git@github.com" target="_blank" rel="noopener">git@github.com</a>进行测试]</p>
+<blockquote>
+<p>Git 全局设置:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name &quot;taocui&quot;  设置用户名</span><br><span class="line">git config --global user.email &quot;taocui@wisedu.com&quot; 设置邮箱</span><br><span class="line"></span><br><span class="line">git config --get-all user.name 获取用户名</span><br><span class="line">git config --get-all user.email 获取邮箱</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<blockquote>
+<p>初始化仓库<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">echo &quot;# demo&quot; &gt;&gt; README.md</span><br><span class="line">git init</span><br><span class="line">git add README.md</span><br><span class="line">git commit -m &quot;first commit&quot;</span><br><span class="line">git remote add origin https://github.com/woniu3821/demo.git</span><br><span class="line">git push -u origin master</span><br><span class="line"></span><br><span class="line">git remote add origin https://github.com/woniu3821/demo.git</span><br><span class="line">git push -u origin master</span><br><span class="line">上面命令将本地的master分支推送到origin主机，同时指定origin为默认主机，后面就可以不加任何参数使用git push</span><br><span class="line"></span><br><span class="line">拉取master</span><br><span class="line">git pull origin master</span><br><span class="line">强制覆盖远程master</span><br><span class="line">git push -u origin master --force</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<blockquote>
+<p>更换git远程仓库地址</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git remote 查看所有远程仓库</span><br><span class="line">git remote xxx 查看指定远程仓库地址</span><br><span class="line">git remote set-url origin 你新的远程仓库地址</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>git将本地原有的项目上传到新的仓库<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">1、打开终端，cd到本地原有项目的目录</span><br><span class="line">2、执行：git remote remove origin</span><br><span class="line">3、执行：git remote add origin 新的仓库git地址</span><br><span class="line"></span><br><span class="line">https://www.jianshu.com/p/6fab6a34f524</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<blockquote>
+<p>合并分支<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">git checkout master</span><br><span class="line">git merge origin/branch(分支名称)</span><br><span class="line">git push</span><br><span class="line">git pull：相当于是从远程获取最新版本并merge到本地(git fetch+git merge)</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<blockquote>
+<p>本地创建分支后推送到远程<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git checkout -b 分支名</span><br><span class="line">git push --set-upstream origin ts-admin-new</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<blockquote>
+<p>查看远程分支<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git branch -r</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<blockquote>
+<p>拉取远程分支并创建本地分支</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">git checkout -b 本地分支名x origin/远程分支名x</span><br><span class="line"></span><br><span class="line">git fetch origin 远程分支名x:本地分支名x</span><br><span class="line">使用该方式会在本地新建分支x，但是不会自动切换到该本地分支x，需要手动checkout</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>回滚版本<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git log -1（数字代表条数，不加代表所有）</span><br><span class="line">git reset --hard e377f60e28c8b84158</span><br><span class="line">git push -f origin master</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<blockquote>
+<p>克隆某个分支到某个目录<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">git clone -b &lt;分支名&gt; https://github.com/woniu3821/ts-admin.git &lt;目录名&gt;</span><br><span class="line"></span><br><span class="line">mkdir tmp &amp;&amp; cd tmp</span><br><span class="line">git init</span><br><span class="line">git fetch https://github.com/woniu3821/ts-admin.git ts-sys-set</span><br><span class="line">git push https://github.com/woniu3821/ts-system.git  FETCH_HEAD:master</span><br></pre></td></tr></table></figure></p>
+</blockquote>
 
       
     </div>
