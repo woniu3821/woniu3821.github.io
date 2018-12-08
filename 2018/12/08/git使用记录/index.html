@@ -1,0 +1,178 @@
+<!DOCTYPE HTML>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="utf-8">
+  
+  <title>git使用记录 | Hexo</title>
+
+  
+  <meta name="author" content="John Doe">
+  
+
+  
+  <meta name="description" content="git 使用方法
+仓库基础设置
+
+@(我的第一个笔记本)[ssh-keygen -t rsa -C “taocui@wisedu.com“, ssh-keygen -t rsa ssh -T git@github.com 进行测试]
+@(github ssh)[ssh-keygen -t rsa s">
+  
+
+  
+  
+  <meta name="keywords" content="git github">
+  
+
+  <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+  <meta property="og:title" content="git使用记录">
+
+  <meta property="og:site_name" content="Hexo">
+
+  
+  <meta property="og:image" content="/favicon.ico">
+  
+
+  <link href="/favicon.ico" rel="icon">
+  <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+</head>
+
+
+<body>
+<div class="blog">
+  <div class="content">
+
+    <header>
+  <div class="site-branding">
+    <h1 class="site-title">
+      <a href="/">Hexo</a>
+    </h1>
+    <p class="site-description"></p>
+  </div>
+  <nav class="site-navigation">
+    <ul>
+      
+        <li><a href="/">Home</a></li>
+      
+        <li><a href="/archives">Archives</a></li>
+      
+    </ul>
+  </nav>
+</header>
+
+    <main class="site-main posts-loop">
+    <article>
+
+  
+    
+    <h3 class="article-title"><span>git使用记录</span></h3>
+    
+  
+
+  <div class="article-top-meta">
+    <span class="posted-on">
+      <a href="/2018/12/08/git使用记录/" rel="bookmark">
+        <time class="entry-date published" datetime="2018-12-08T09:59:21.000Z">
+          2018-12-08
+        </time>
+      </a>
+    </span>
+  </div>
+
+
+  
+
+  <div class="article-content">
+    <div class="entry">
+      
+        <h1 id="git-使用方法"><a href="#git-使用方法" class="headerlink" title="git 使用方法"></a>git 使用方法</h1><blockquote>
+<p>仓库基础设置</p>
+</blockquote>
+<p>@(我的第一个笔记本)[ssh-keygen -t rsa -C “<a href="mailto:taocui@wisedu.com" target="_blank" rel="noopener">taocui@wisedu.com</a>“, ssh-keygen -t rsa ssh -T <a href="mailto:git@github.com" target="_blank" rel="noopener">git@github.com</a> 进行测试]</p>
+<p>@(github ssh)[ssh-keygen -t rsa ssh -T <a href="mailto:git@github.com" target="_blank" rel="noopener">git@github.com</a> 进行测试]</p>
+<blockquote>
+<p>Git 全局设置:</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name &quot;taocui&quot;  设置用户名</span><br><span class="line">git config --global user.email &quot;taocui@wisedu.com&quot; 设置邮箱</span><br><span class="line"></span><br><span class="line">git config --get-all user.name 获取用户名</span><br><span class="line">git config --get-all user.email 获取邮箱</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>初始化仓库</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">echo &quot;# demo&quot; &gt;&gt; README.md</span><br><span class="line">git init</span><br><span class="line">git add README.md</span><br><span class="line">git commit -m &quot;first commit&quot;</span><br><span class="line">git remote add origin https://github.com/woniu3821/demo.git</span><br><span class="line">git push -u origin master</span><br><span class="line"></span><br><span class="line">git remote add origin https://github.com/woniu3821/demo.git</span><br><span class="line">git push -u origin master</span><br><span class="line">上面命令将本地的master分支推送到origin主机，同时指定origin为默认主机，后面就可以不加任何参数使用git push</span><br><span class="line"></span><br><span class="line">拉取master</span><br><span class="line">git pull origin master</span><br><span class="line">强制覆盖远程master</span><br><span class="line">git push -u origin master --force</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>更换 git 远程仓库地址</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git remote 查看所有远程仓库</span><br><span class="line">git remote xxx 查看指定远程仓库地址</span><br><span class="line">git remote set-url origin 你新的远程仓库地址</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>git 将本地原有的项目上传到新的仓库</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">1、打开终端，cd到本地原有项目的目录</span><br><span class="line">2、执行：git remote remove origin</span><br><span class="line">3、执行：git remote add origin 新的仓库git地址</span><br><span class="line"></span><br><span class="line">https://www.jianshu.com/p/6fab6a34f524</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>合并分支</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">git checkout master</span><br><span class="line">git merge origin/branch(分支名称)</span><br><span class="line">git push</span><br><span class="line">git pull：相当于是从远程获取最新版本并merge到本地(git fetch+git merge)</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>本地创建分支后推送到远程</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git checkout -b 分支名</span><br><span class="line">git push --set-upstream origin ts-admin-new</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>查看远程分支</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git branch -r</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>拉取远程分支并创建本地分支</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">git checkout -b 本地分支名x origin/远程分支名x</span><br><span class="line"></span><br><span class="line">git fetch origin 远程分支名x:本地分支名x</span><br><span class="line">使用该方式会在本地新建分支x，但是不会自动切换到该本地分支x，需要手动checkout</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>回滚版本</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git log -1（数字代表条数，不加代表所有）</span><br><span class="line">git reset --hard e377f60e28c8b84158</span><br><span class="line">git push -f origin master</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>克隆某个分支到某个目录</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">git clone -b &lt;分支名&gt; https://github.com/woniu3821/ts-admin.git &lt;目录名&gt;</span><br><span class="line"></span><br><span class="line">mkdir tmp &amp;&amp; cd tmp</span><br><span class="line">git init</span><br><span class="line">git fetch https://github.com/woniu3821/ts-admin.git ts-sys-set</span><br><span class="line">git push https://github.com/woniu3821/ts-system.git  FETCH_HEAD:master</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+  </div>
+
+  <div class="article-footer">
+    <div class="article-meta pull-left">
+
+    
+
+    
+    
+
+    <span class="post-tags">
+      <i class="icon-tags"></i>
+        <a href="/tags/git-github/">git github</a>
+    </span>
+    
+
+    </div>
+
+    
+  </div>
+</article>
+
+
+    </main>
+
+    <footer class="site-footer">
+  <p class="site-info">
+    Proudly powered by <a href="https://hexo.io/" target="_blank">Hexo</a> and
+    Theme by <a href="https://github.com/CodeDaraW/Hacker" target="_blank">Hacker</a>
+    <br>
+    
+    &copy; 2018 John Doe
+    
+  </p>
+</footer>
+    
+  </div>
+</div>
+</body>
+</html>
